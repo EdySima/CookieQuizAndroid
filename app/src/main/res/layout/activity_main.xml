@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+    android:id="@+id/actMain_buttonsTop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/actMain_noCookie"
+        android:background="@drawable/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/actMain_noCookie_Cookie"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/one_cookie"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/cookie" />
+        <TextView
+            android:id="@+id/actMain_noCookie_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_no_cookie"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/actMain_noCookie_Cookie"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20sp"
+            android:textColor="@color/brown"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/actMain_options"
+        android:background="@drawable/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="5dp"
+        android:layout_alignParentEnd="true"
+        android:onClick="logout"
+        >
+
+        <ImageView
+            android:id="@+id/actMain_options_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/options"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/actMain_otpions_text"
+            android:contentDescription="@string/options" />
+        <TextView
+            android:id="@+id/actMain_otpions_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/options"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20sp"
+            android:textColor="@color/brown"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            />
+    </RelativeLayout>
+</RelativeLayout>
+
+    <ImageView
+        android:id="@+id/actMain_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actMain_buttonsTop"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/logo" />
+
+    <RelativeLayout
+        android:id="@+id/actMain_SinglePlayer"
+        android:background="@drawable/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_below="@+id/actMain_logo"
+        android:layout_centerHorizontal="true"
+        >
+        <TextView
+            android:id="@+id/actMain_SinglePlayer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_single_player"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="30sp"
+            android:textColor="@color/brown"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            />
+        <ImageView
+            android:id="@+id/actMain_SinglePlayer_Cookie"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:src="@drawable/one_cookie"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/actMain_SinglePlayer_text"
+            android:contentDescription="@string/cookie" />
+        <Button
+            android:id="@+id/actMain_SinglePlayer_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/actMain_SinglePlayer_Cookie"
+            android:layout_marginTop="30dp"
+            android:text="@string/prompt_start"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20sp"
+            android:background="@drawable/button"/>
+    </RelativeLayout>
+</RelativeLayout>

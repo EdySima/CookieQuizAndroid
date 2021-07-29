@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "765959288225",
+    "project_id": "cookiequiz-cbabc",
+    "storage_bucket": "cookiequiz-cbabc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765959288225:android:3a7bef89eaed2effba07e0",
+        "android_client_info": {
+          "package_name": "com.example.cookiequiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765959288225-p79f151esj7813ss1ncadmei42ns0vs7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqLNT-9vf9-I6kSEH7W4yWmc_DQTAX73g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765959288225-p79f151esj7813ss1ncadmei42ns0vs7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

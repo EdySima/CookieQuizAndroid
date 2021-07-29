@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".QuizResults">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/actQuizResult_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="You answered 5 \n questions correctly."
+            android:fontFamily="@font/luckiest_guy"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/brown"
+            />
+
+        <TextView
+            android:id="@+id/actQuizResult_WonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="You won"
+            android:fontFamily="@font/luckiest_guy"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/brown"
+            android:layout_below="@+id/actQuizResult_Text"
+            />
+
+        <ImageView
+            android:id="@+id/actMain_SinglePlayer_Cookie"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:src="@drawable/one_cookie"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/actQuizResult_WonText"
+            android:contentDescription="@string/cookie" />
+
+        <TextView
+            android:id="@+id/actQuizResult_WonCookies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="50 cookies"
+            android:fontFamily="@font/luckiest_guy"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/brown"
+            android:layout_below="@+id/actMain_SinglePlayer_Cookie"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/actQuizResults_menuBtn"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/light_yellow"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/actQuizResult_WonCookies"
+            android:text="Menu"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

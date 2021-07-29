@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".QuizActivity">
+
+    <RelativeLayout
+        android:id="@+id/actQuiz_buttonsTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/actQuiz_noCookie"
+            android:background="@drawable/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            >
+
+            <ImageView
+                android:id="@+id/actQuiz_noCookie_Cookie"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/one_cookie"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/cookie" />
+            <TextView
+                android:id="@+id/actQuiz_noCookie_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prompt_no_cookie"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/actQuiz_noCookie_Cookie"
+                android:fontFamily="@font/luckiest_guy"
+                android:textSize="20sp"
+                android:textColor="@color/brown"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/actQuiz_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo" />
+
+        <RelativeLayout
+            android:id="@+id/actQuiz_options"
+            android:background="@drawable/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_alignParentEnd="true"
+            >
+
+            <ImageView
+                android:id="@+id/actQuiz_options_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/options"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/actQuiz_otpions_text"
+                android:contentDescription="@string/options" />
+            <TextView
+                android:id="@+id/actQuiz_otpions_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/options"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/luckiest_guy"
+                android:textSize="20sp"
+                android:textColor="@color/brown"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/actQuiz_noQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actQuiz_buttonsTop"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/actQuiz_noQuestion_ActualQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/brown"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"/>
+
+        <ProgressBar
+            android:id="@+id/actQuiz_noQuestion_Bar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="300dp"
+            android:layout_height="25dp"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/actQuiz_Question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actQuiz_noQuestion"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="220dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/question_card_back"
+            />
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="210dp"
+            android:background="@drawable/question_card_mid"
+            android:layout_centerHorizontal="true"
+            />
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/question_card_front"
+            android:gravity="center">
+        <TextView
+            android:id="@+id/actQuiz_QuestionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_question"
+            android:textColor="@color/brown"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="30sp"
+            />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/actQuiz_Answers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actQuiz_Question"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/actQuiz_Answer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer_button"
+            android:textColor="@color/brown"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Answer 1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/actQuiz_Answer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer_button"
+            android:textColor="@color/brown"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Answer 2"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/actQuiz_Answer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer_button"
+            android:textColor="@color/brown"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Answer 3"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/actQuiz_Answer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer_button"
+            android:textColor="@color/brown"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Answer 4"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/actQuiz_nextBtn"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button"
+            android:textColor="@color/light_yellow"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="next"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
